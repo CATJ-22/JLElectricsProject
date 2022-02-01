@@ -21,3 +21,6 @@ Route::get('/', function () {
 
 Route::get('/Logout', [App\Http\Controllers\AuthController::class, 'Logout'])->name('logout');
 Route::post('/Login', [App\Http\Controllers\AuthController::class, 'Login']);
+
+
+Route::get('/Menu', [App\Http\Controllers\MenuController::class, 'Menu'])->name('Menu');
