@@ -20,7 +20,7 @@ class AuthController extends Controller
       return response()->json(array('mensaje' => "success"), 200);
     }
 
-    return response()->json(array('mensaje' => "Lo sentimos: no hemos identificado su usuario o contraseña en nuestros registros!"), 404);
+    return response()->json(array('mensaje' => "Lo sentimos: no hemos identificado su usuario o contraseña en nuestros registros!"), 400);
   }
 
   public function Logout()

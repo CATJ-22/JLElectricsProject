@@ -15,12 +15,13 @@ use Illuminate\Support\Facades\Hash;
 */
 
 Route::get('/', function () {
-    // DB::table('users')->insert(["usuario"=>"jlelectric", "password"=>Hash::make("123456"), "role"=>"admin"]);
-    return view('welcome');
-});
+	// DB::table('users')->insert(["usuario"=>"jlelectric", "password"=>Hash::make("123456"), "role"=>"admin"]);
+	return view('welcome');
+})->name('welcome');
 
 Route::get('/Logout', [App\Http\Controllers\AuthController::class, 'Logout'])->name('logout');
 Route::post('/Login', [App\Http\Controllers\AuthController::class, 'Login']);
 
-
+Route::group(['middleware' => ['auth']], function () {
 Route::get('/Menu', [App\Http\Controllers\MenuController::class, 'Menu'])->name('Menu');
+});

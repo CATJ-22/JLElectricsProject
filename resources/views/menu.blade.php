@@ -18,7 +18,7 @@
 
 </head>
 
-<body>
+<body style="background-image: linear-gradient(-225deg, #20E2D7 0%, #F9FEA5 100%);">
   <div id="app" class="container">
     <div class="row" style="height: 100vh;">
       <div class="col-md-12 align-self-center">

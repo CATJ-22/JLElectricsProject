@@ -47,6 +47,7 @@
 </template>
 <script>
 import * as AuthServices from "../../services/auth";
+import * as AlertasHelper from "../../helpers/alertas";
 export default {
   name: "Login",
   data() {
@@ -75,7 +76,7 @@ export default {
             window.location.href = window.location.origin +"/Menu"
           } else {
             Swal.close();
-            Swal.fire("Error?", res.data.mensaje, "error");
+            AlertasHelper.alerts(res);
           }
         })
         .catch((res) => {
